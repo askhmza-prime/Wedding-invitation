@@ -13,12 +13,12 @@
   --ink:#3b1622;--muted:#684b53;--wine:#74192f;--wine-dark:#43101f;
   --wine-mid:#8b2943;--sage:#66705b;--sage-dark:#3f493b;
   --gold:#b78b42;--gold-light:#d9bd7e;--line:rgba(116,25,47,.28);
-  --shadow:0 24px 70px rgba(67,16,31,.20)
+  --shadow:0 15px 35px rgba(67,16,31,.18);
 }
 
 * { box-sizing: border-box; }
 
-/* Strictly disable scrolling on body & html without pausing animations */
+/* Strictly disable scrolling without stopping animations */
 html, body {
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ html, body {
   background: #3d1722;
   color: var(--ink);
   font-family: 'Playfair Display', serif;
-  touch-action: none; /* Prevents touch dragging */
+  touch-action: none;
 }
 
 .page {
@@ -39,25 +39,27 @@ html, body {
   margin: auto;
   background: var(--ivory);
   overflow: hidden;
-  box-shadow: 0 0 70px rgba(48,34,17,.15);
+  box-shadow: 0 0 50px rgba(48,34,17,.15);
 }
 
+/* Lightweight background pattern */
 .page:before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .22;
+  opacity: .18;
   background-image: radial-gradient(rgba(120,95,55,.16) .65px, transparent .65px);
-  background-size: 10px 10px;
+  background-size: 12px 12px;
 }
 
-/* Continuously floating leaf & petal animation layers */
+/* Hardware-accelerated particle layers */
 .petals, .motion-leaves, .ambient {
   position: fixed;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  transform: translateZ(0); /* Force GPU layer */
 }
 .petals { z-index: 90; }
 .motion-leaves { z-index: 91; }
@@ -72,17 +74,14 @@ html, body {
   border-radius: 80% 20% 80% 20%;
   background: var(--c);
   opacity: var(--o);
-  filter: blur(var(--blur));
   animation: fall var(--dur) linear var(--delay) infinite;
-  transform: rotate(var(--rot));
   will-change: transform;
 }
 
 @keyframes fall {
-  0% { transform: translate3d(0,-30px,0) rotate(var(--rot)) scale(.75); }
-  25% { transform: translate3d(calc(var(--drift)*.35),28vh,0) rotate(calc(var(--rot) + 130deg)) scale(1); }
-  55% { transform: translate3d(calc(var(--drift)*-.55),61vh,0) rotate(calc(var(--rot) + 260deg)) scale(.9); }
-  100% { transform: translate3d(var(--drift),112vh,0) rotate(calc(var(--rot) + 510deg)) scale(1.05); }
+  0% { transform: translate3d(0,-30px,0) rotate(var(--rot)) scale(.8); }
+  50% { transform: translate3d(calc(var(--drift)*.5),55vh,0) rotate(calc(var(--rot) + 200deg)) scale(1); }
+  100% { transform: translate3d(var(--drift),110vh,0) rotate(calc(var(--rot) + 400deg)) scale(.9); }
 }
 
 .motion-leaf {
@@ -94,38 +93,34 @@ html, body {
   border-radius: 80% 20% 80% 20%;
   background: var(--c);
   opacity: var(--o);
-  filter: drop-shadow(0 3px 5px rgba(67,16,31,.12));
-  animation: cinematicLeaf var(--dur) cubic-bezier(.35,.05,.55,1) var(--delay) infinite;
+  animation: cinematicLeaf var(--dur) linear var(--delay) infinite;
   will-change: transform, opacity;
 }
 
 @keyframes cinematicLeaf {
-  0% { transform: translate3d(0,-10vh,0) rotate(0deg) scale(.7); opacity: 0; }
-  8% { opacity: var(--o); }
-  30% { transform: translate3d(calc(var(--drift)*.3),30vh,0) rotate(150deg) scale(1); }
-  58% { transform: translate3d(calc(var(--drift)*-.55),63vh,0) rotate(300deg) scale(.88); }
-  82% { opacity: var(--o); }
-  100% { transform: translate3d(var(--drift),115vh,0) rotate(510deg) scale(1.08); opacity: 0; }
+  0% { transform: translate3d(0,-10vh,0) rotate(0deg); opacity: 0; }
+  15% { opacity: var(--o); }
+  85% { opacity: var(--o); }
+  100% { transform: translate3d(var(--drift),112vh,0) rotate(360deg); opacity: 0; }
 }
 
 .orb {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(183,139,66,.20), rgba(116,25,47,.06) 35%, transparent 70%);
-  filter: blur(8px);
-  animation: orbFloat 11s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(183,139,66,.18), rgba(116,25,47,.04) 50%, transparent 70%);
+  animation: orbFloat 12s ease-in-out infinite alternate;
+  will-change: transform;
 }
-.orb:nth-child(2) { width: 220px; height: 220px; animation-duration: 15s; }
-.orb:nth-child(3) { width: 130px; height: 130px; animation-duration: 9s; }
+.orb:nth-child(2) { width: 200px; height: 200px; animation-duration: 16s; }
 
 @keyframes orbFloat {
-  from { transform: translate3d(-15px,15px,0) scale(.92); }
-  to { transform: translate3d(30px,-25px,0) scale(1.08); }
+  from { transform: translate3d(-10px,10px,0); }
+  to { transform: translate3d(20px,-20px,0); }
 }
 
-/* Section styling */
+/* Opening Section */
 #opening {
   height: 100vh;
   padding: 0;
@@ -135,23 +130,20 @@ html, body {
 }
 
 .opening-inner { width: 100%; height: 100%; position: relative; display: grid; place-items: center; }
+
 .opening-card {
   width: min(84%,390px);
-  height: 600px;
+  height: 580px;
   position: relative;
-  perspective: 1400px;
+  perspective: 1000px;
   cursor: pointer;
-  transform-style: preserve-3d;
-  animation: openingBreath 4.2s ease-in-out infinite, openingFloat 6s ease-in-out infinite;
+  animation: openingFloat 5s ease-in-out infinite;
+  will-change: transform;
 }
 
-@keyframes openingBreath {
-  0%,100% { filter: drop-shadow(0 22px 24px rgba(83,68,42,.08)); }
-  50% { filter: drop-shadow(0 30px 34px rgba(83,68,42,.14)); }
-}
 @keyframes openingFloat {
-  0%,100% { transform: translateY(0) rotateZ(0); }
-  50% { transform: translateY(-7px) rotateZ(.15deg); }
+  0%,100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-6px,0); }
 }
 
 .envelope {
@@ -172,32 +164,33 @@ html, body {
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   border: 1px solid rgba(116,25,47,.26);
   transform-origin: top;
-  transition: transform 1.15s cubic-bezier(.2,.8,.2,1);
+  transition: transform 0.8s ease-out;
   z-index: 5;
+  will-change: transform;
 }
 
-.opening-card.open .flap { transform: rotateX(176deg) translateY(-2px); }
+.opening-card.open .flap { transform: rotateX(170deg); }
 
 .seal {
   position: absolute;
   z-index: 7;
   left: 50%; top: 49%;
   transform: translate(-50%,-50%);
-  width: 70px; height: 70px;
+  width: 66px; height: 66px;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 25%,#e2d29f,#b0924e 65%,#79622f);
-  box-shadow: 0 10px 26px rgba(67,16,31,.28), inset 0 2px 5px rgba(255,255,255,.55);
+  box-shadow: 0 6px 16px rgba(67,16,31,.22);
   display: grid;
   place-items: center;
   color: #fff9e9;
-  font-family: 'Great Vibes';
-  font-size: 30px;
-  border: 3px solid #d8c389;
-  transition: transform .9s, opacity .6s;
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  border: 2px solid #d8c389;
+  transition: transform .6s, opacity .4s;
 }
 
 .opening-card.open .seal {
-  transform: translate(-50%,-50%) scale(.12) rotate(55deg);
+  transform: translate(-50%,-50%) scale(.2);
   opacity: 0;
 }
 
@@ -212,17 +205,14 @@ html, body {
   text-align: center;
 }
 .opening-copy h1 {
-  font: 55px 'Great Vibes', cursive;
-  margin: 9px 0;
+  font: 52px 'Great Vibes', cursive;
+  margin: 8px 0;
   color: var(--wine);
-  text-shadow: 0 2px 0 rgba(255,255,255,.65);
-  animation: titleFloat 3.8s ease-in-out infinite;
 }
-@keyframes titleFloat { 50% { transform: translateY(-3px); } }
 
-.opening-copy p { margin: 0; color: #a08b61; letter-spacing: 4px; font-size: 9px; }
-.opening-copy .bismillah { font-size: 22px; color: var(--wine-dark); margin-bottom: 24px; }
-.opening-copy .date { font-size: 10px; letter-spacing: 3px; margin-top: 18px; }
+.opening-copy p { margin: 0; color: #a08b61; letter-spacing: 3px; font-size: 9px; }
+.opening-copy .bismillah { font-size: 20px; color: var(--wine-dark); margin-bottom: 20px; }
+.opening-copy .date { font-size: 10px; letter-spacing: 2px; margin-top: 16px; }
 
 .tap {
   position: absolute;
@@ -230,32 +220,32 @@ html, body {
   bottom: 14%;
   left: 50%;
   transform: translateX(-50%);
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 99px;
   border: 1px solid rgba(116,25,47,.32);
   background: rgba(255,250,243,.94);
   color: var(--wine);
-  letter-spacing: 4px;
-  font-size: 11px;
+  letter-spacing: 3px;
+  font-size: 10px;
   font-family: inherit;
   cursor: pointer;
   font-weight: 600;
 }
-.tap span { display: block; margin-top: 7px; font-size: 20px; animation: bob 1.4s infinite; }
-@keyframes bob { 50% { transform: translateY(5px); } }
+.tap span { display: block; margin-top: 4px; font-size: 16px; animation: bob 1.4s infinite; }
+@keyframes bob { 50% { transform: translateY(4px); } }
 
 .music {
   position: fixed;
   right: 15px;
   bottom: 17px;
   z-index: 90;
-  width: 43px;
-  height: 43px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(116,25,47,.34);
   background: rgba(255,248,237,.96);
   color: var(--wine);
-  box-shadow: 0 9px 28px rgba(67,16,31,.20);
+  box-shadow: 0 4px 14px rgba(67,16,31,.15);
   cursor: pointer;
 }
 </style>
@@ -264,9 +254,8 @@ html, body {
 
 <div class="petals" aria-hidden="true"></div>
 <div class="ambient" aria-hidden="true">
-  <i class="orb" style="left:-60px;top:12%"></i>
-  <i class="orb" style="right:-80px;top:46%"></i>
-  <i class="orb" style="left:25%;bottom:4%"></i>
+  <i class="orb" style="left:-40px;top:10%"></i>
+  <i class="orb" style="right:-50px;top:50%"></i>
 </div>
 <div class="motion-leaves" aria-hidden="true"></div>
 
@@ -294,41 +283,40 @@ html, body {
 <script>
 const $ = s => document.querySelector(s);
 
-// Generate falling petals
-const petalPalette = ['rgba(116,25,47,.48)','rgba(145,38,61,.36)','rgba(188,145,69,.42)','rgba(225,197,129,.32)','rgba(92,68,45,.28)'];
-for(let i=0; i<48; i++){
+// Lightweight Petal Pool (20 items for high performance)
+const petalPalette = ['rgba(116,25,47,.5)','rgba(145,38,61,.4)','rgba(188,145,69,.45)','rgba(225,197,129,.35)'];
+for(let i=0; i<20; i++){
   const p = document.createElement('i');
   p.className = 'petal';
   p.style.setProperty('--x', (Math.random()*100)+'%');
-  p.style.setProperty('--w', (5+Math.random()*7)+'px');
-  p.style.setProperty('--h', (8+Math.random()*10)+'px');
+  p.style.setProperty('--w', (6+Math.random()*6)+'px');
+  p.style.setProperty('--h', (9+Math.random()*8)+'px');
   p.style.setProperty('--c', petalPalette[i%petalPalette.length]);
-  p.style.setProperty('--o', (0.55+Math.random()*.4).toFixed(2));
-  p.style.setProperty('--blur', (Math.random()*1.1).toFixed(2)+'px');
-  p.style.setProperty('--dur', (8+Math.random()*12).toFixed(2)+'s');
-  p.style.setProperty('--delay', (-Math.random()*18).toFixed(2)+'s');
+  p.style.setProperty('--o', (0.6+Math.random()*.35).toFixed(2));
+  p.style.setProperty('--dur', (7+Math.random()*8).toFixed(2)+'s');
+  p.style.setProperty('--delay', (-Math.random()*10).toFixed(2)+'s');
   p.style.setProperty('--rot', (Math.random()*180).toFixed(1)+'deg');
-  p.style.setProperty('--drift', ((-70)+Math.random()*140).toFixed(1)+'px');
+  p.style.setProperty('--drift', ((-50)+Math.random()*100).toFixed(1)+'px');
   $('.petals').appendChild(p);
 }
 
-// Generate continuous leaves
-const leafPalette = ['rgba(116,25,47,.82)','rgba(145,38,61,.68)','rgba(188,145,69,.72)','rgba(224,194,122,.58)'];
-for(let i=0; i<30; i++){
+// Lightweight Leaf Pool (12 items)
+const leafPalette = ['rgba(116,25,47,.75)','rgba(145,38,61,.65)','rgba(188,145,69,.7)'];
+for(let i=0; i<12; i++){
   const l = document.createElement('i');
   l.className = 'motion-leaf';
   l.style.setProperty('--x', (Math.random()*100)+'%');
-  l.style.setProperty('--w', (7+Math.random()*10)+'px');
-  l.style.setProperty('--h', (12+Math.random()*16)+'px');
+  l.style.setProperty('--w', (8+Math.random()*8)+'px');
+  l.style.setProperty('--h', (12+Math.random()*12)+'px');
   l.style.setProperty('--c', leafPalette[i%leafPalette.length]);
-  l.style.setProperty('--o', (0.55+Math.random()*.35).toFixed(2));
-  l.style.setProperty('--dur', (7+Math.random()*10).toFixed(2)+'s');
-  l.style.setProperty('--delay', (-Math.random()*14).toFixed(2)+'s');
-  l.style.setProperty('--drift', ((-90)+Math.random()*180).toFixed(1)+'px');
+  l.style.setProperty('--o', (0.6+Math.random()*.3).toFixed(2));
+  l.style.setProperty('--dur', (8+Math.random()*7).toFixed(2)+'s');
+  l.style.setProperty('--delay', (-Math.random()*10).toFixed(2)+'s');
+  l.style.setProperty('--drift', ((-60)+Math.random()*120).toFixed(1)+'px');
   $('.motion-leaves').appendChild(l);
 }
 
-// Envelope open trigger
+// Envelope Interaction
 $('#openBtn').addEventListener('click', (e) => {
   e.stopPropagation();
   $('#envelope').classList.add('open');
@@ -337,5 +325,4 @@ $('#openBtn').addEventListener('click', (e) => {
 $('#musicBtn').addEventListener('click', () => alert('Music playback ready.'));
 </script>
 </body>
-  </html>
-  
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#651f31"/>
+<title>Ayaz & Sadia — Wedding Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{--ivory:#f7f1e8;--cream:#eee2d4;--paper:#fffaf3;--ink:#4a1724;--muted:#6f4b55;--wine:#651f31;--wine-dark:#43111f;--sage:#68745b;--sage-dark:#4e5946;--gold:#b18a4a;--gold-light:#d7bd82;--line:rgba(101,31,49,.24);--shadow:0 20px 55px rgba(67,17,31,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#d9c5ba;color:var(--ink);font-family:'Playfair Display',serif;overflow-x:hidden;overflow-y:hidden;overscroll-behavior-y:none}.page{position:relative;width:100%;max-width:480px;margin:auto;background:var(--ivory);min-height:100vh;overflow:hidden;box-shadow:0 0 70px rgba(48,34,17,.15)}.page{color:var(--ink)}.page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(rgba(120,95,55,.16) .65px,transparent .65px);background-size:10px 10px}.petals{position:fixed;inset:0;pointer-events:none;z-index:9998;overflow:hidden}.petal{position:absolute;top:-24px;left:var(--x);width:var(--w);height:var(--h);border-radius:80% 20% 80% 20%;background:var(--c);opacity:var(--o);filter:blur(var(--blur));animation:fall var(--dur) linear var(--delay) infinite;transform:rotate(var(--rot));will-change:transform}.petal:after{content:'';position:absolute;inset:20% 45%;background:rgba(255,255,255,.28);border-radius:50%;filter:blur(1px)}@keyframes fall{0%{transform:translate3d(0,-30px,0) rotate(var(--rot)) scale(.75)}25%{transform:translate3d(calc(var(--drift)*.35),28vh,0) rotate(calc(var(--rot) + 130deg)) scale(1)}55%{transform:translate3d(calc(var(--drift)*-.55),61vh,0) rotate(calc(var(--rot) + 260deg)) scale(.9)}100%{transform:translate3d(var(--drift),112vh,0) rotate(calc(var(--rot) + 510deg)) scale(1.05)}}
+.ambient{display:none;position:fixed;inset:0;pointer-events:none;z-index:79;overflow:hidden}.orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(220,202,151,.16),transparent 68%);filter:blur(8px);animation:orbFloat 11s ease-in-out infinite alternate}.orb:nth-child(2){width:220px;height:220px;animation-duration:15s}.orb:nth-child(3){width:130px;height:130px;animation-duration:9s}@keyframes orbFloat{from{transform:translate3d(-15px,15px,0) scale(.92)}to{transform:translate3d(30px,-25px,0) scale(1.08)}}
+.section{position:relative;padding:76px 25px}.ornate{position:relative}.ornate:before,.ornate:after{content:"";position:absolute;left:23px;right:23px;height:28px;background:linear-gradient(135deg,transparent 9px,var(--gold-light) 10px,transparent 11px) 0 0/18px 18px,linear-gradient(45deg,transparent 9px,var(--gold-light) 10px,transparent 11px) 0 0/18px 18px;opacity:.52;pointer-events:none}.ornate:before{top:17px}.ornate:after{bottom:17px;transform:scaleY(-1)}
+.corner{position:absolute;width:82px;height:82px;opacity:.72;border-color:rgba(179,151,91,.52)}.corner:after{content:'❀';position:absolute;color:#b79d68;font-size:17px;line-height:1}.corner.tl{top:25px;left:22px;border-left:1px solid;border-top:1px solid;border-radius:28px 0 0 0}.corner.tl:after{left:7px;top:9px}.corner.tr{top:25px;right:22px;border-right:1px solid;border-top:1px solid;border-radius:0 28px 0 0}.corner.tr:after{right:7px;top:9px}.corner.bl{bottom:25px;left:22px;border-left:1px solid;border-bottom:1px solid;border-radius:0 0 0 28px}.corner.bl:after{left:7px;bottom:9px}.corner.br{bottom:25px;right:22px;border-right:1px solid;border-bottom:1px solid;border-radius:0 0 28px 0}.corner.br:after{right:7px;bottom:9px}
+.eyebrow{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9b8a67}.script{font-family:'Great Vibes',cursive;color:var(--sage-dark)}.rule{width:126px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto;position:relative}.rule:after{content:'✦';position:absolute;left:50%;top:-9px;transform:translateX(-50%);color:var(--gold);font-size:12px;background:var(--ivory);padding:0 7px}
+/* OPENING — inspired by the reference envelope */
+#opening{height:100svh;min-height:680px;padding:0;display:grid;place-items:center;background:linear-gradient(180deg,#fcfaf3 0%,#f5eee0 100%);overscroll-behavior:none}.opening-inner{width:100%;height:100%;position:relative;display:grid;place-items:center}.opening-card{width:min(84%,390px);height:600px;position:relative;perspective:1400px;cursor:pointer;transform-style:preserve-3d;animation:openingBreath 5s ease-in-out infinite}.opening-card:hover{transform:translateY(-4px) rotateX(1deg)}@keyframes openingBreath{0%,100%{filter:drop-shadow(0 22px 24px rgba(83,68,42,.08))}50%{filter:drop-shadow(0 30px 34px rgba(83,68,42,.14))}}.opening-card:before{content:"";position:absolute;inset:0;border:1px solid rgba(185,160,100,.38);box-shadow:0 20px 50px rgba(77,60,35,.11);background:rgba(255,253,247,.72)}.opening-card:after{content:"❦  ❧  ❦";position:absolute;bottom:27px;left:0;right:0;text-align:center;color:#b89d69;font-size:17px;letter-spacing:6px;z-index:1}.envelope{position:absolute;inset:11% 4% 8%;background:linear-gradient(145deg,#fffdf7,#f5eee0);border:1px solid rgba(183,154,88,.46);box-shadow:var(--shadow);overflow:hidden;z-index:2;transform:translateZ(0);transition:box-shadow 1s ease}.envelope:global{}.envelope:before{content:"";position:absolute;inset:13px;border:1px solid rgba(183,154,88,.38)}.envelope:after{content:"❧                 ❧";white-space:pre;position:absolute;top:17px;left:22px;right:22px;text-align:center;color:#b7a06f;font-size:18px;letter-spacing:5px;opacity:.75}.flap{position:absolute;left:4%;right:4%;top:11%;height:48%;background:linear-gradient(145deg,#fffdf7,#f0e7d7);clip-path:polygon(0 0,100% 0,50% 100%);border:1px solid rgba(183,154,88,.46);transform-origin:top;transition:transform 1.15s cubic-bezier(.2,.8,.2,1);z-index:5}.opening-card.open .flap{transform:rotateX(176deg) translateY(-2px)}.opening-card.open{animation:none}.opening-card.open .envelope{box-shadow:0 30px 80px rgba(77,60,35,.2)}.seal{position:absolute;z-index:7;left:50%;top:49%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#e2d29f,#b0924e 65%,#79622f);box-shadow:0 8px 18px rgba(76,54,24,.24),inset 0 2px 5px rgba(255,255,255,.48);display:grid;place-items:center;color:#fff9e9;font-family:'Great Vibes';font-size:30px;border:3px solid #d8c389;transition:transform .9s,opacity .6s}.opening-card.open .seal{transform:translate(-50%,-50%) scale(.12) rotate(55deg);opacity:0;filter:blur(2px)}.opening-copy{position:absolute;z-index:4;inset:16% 11% 15%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.opening-copy h1{font:55px 'Great Vibes';font-weight:400;margin:9px 0;color:var(--sage-dark);text-shadow:0 1px 0 rgba(255,255,255,.6);animation:titleFloat 3.8s ease-in-out infinite}@keyframes titleFloat{50%{transform:translateY(-3px)}}.opening-copy p{margin:0;color:#a08b61;letter-spacing:4px;font-size:9px}.opening-copy .bismillah{font-size:22px;color:#6e7562;margin-bottom:24px}.opening-copy .date{font-size:10px;letter-spacing:3px;margin-top:18px}.tap{position:absolute;z-index:8;bottom:14%;left:50%;transform:translateX(-50%);padding:12px 18px;border-radius:99px;transition:transform .25s ease,letter-spacing .25s ease}.tap:hover{transform:translateX(-50%) translateY(-2px);letter-spacing:5px}.tap:after{content:'';position:absolute;inset:0;border:1px solid rgba(183,154,88,.18);border-radius:99px;animation:pulseRing 2.2s ease-out infinite}@keyframes pulseRing{0%{transform:scale(.92);opacity:.7}100%{transform:scale(1.28);opacity:0}}border:0;background:transparent;color:#675c47;letter-spacing:4px;font-size:11px;font-family:inherit;cursor:pointer}.tap span{display:block;margin-top:7px;font-size:20px;animation:bob 1.4s infinite}@keyframes bob{50%{transform:translateY(5px)}}.open-hint{position:absolute;bottom:5.5%;font-size:9px;letter-spacing:4px;color:#9d8b67;text-transform:uppercase}
+/* HERO */
+.hero{text-align:center;padding-top:86px;padding-bottom:84px;background:#fbf8ef}.hero .arabic{font-size:25px;margin-bottom:20px;color:#5e6758}.hero h1{font:60px/1 'Cormorant Garamond';font-weight:500;margin:13px 0 7px;color:#3d4a3c}.hero .amp{font:27px 'Cormorant Garamond';color:var(--gold)}.hero .sub{font-size:10px;letter-spacing:4px;color:#8f8060;text-transform:uppercase}.leaf{font-size:20px;color:#a99060;margin:19px 0}.datebox{margin:28px auto 0;max-width:340px;padding:18px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.datebox strong{display:block;font:20px 'Cormorant Garamond';letter-spacing:2px}.datebox small{letter-spacing:3px;color:#8c7d5e;font-size:9px}
+/* CARDS / INVITATION */
+.intro{text-align:center;background:radial-gradient(circle at 50% 15%,rgba(214,197,151,.18),transparent 35%),#f4eee2;padding-top:78px;padding-bottom:80px}.card{background:rgba(255,253,247,.93);border:1px solid rgba(183,154,88,.35);box-shadow:0 15px 42px rgba(83,66,40,.09);padding:38px 24px;position:relative}.card:before{content:"";position:absolute;inset:9px;border:1px solid rgba(183,154,88,.2);pointer-events:none}.intro h2,.events h2,.venue h2,.duas h2{font:42px 'Cormorant Garamond';font-weight:500;margin:10px 0;color:#485448}.intro p{font:16px/1.85 'Cormorant Garamond';color:#6e6a59;margin:24px 0}.seal-mini{width:58px;height:58px;border-radius:50%;margin:0 auto 18px;background:radial-gradient(circle at 30% 25%,#d2cf9f,#7f956b 70%);display:grid;place-items:center;color:white;font:23px 'Great Vibes';box-shadow:0 7px 16px rgba(65,75,55,.2)}.note-btn{border:1px solid rgba(108,101,75,.3);background:#eef0e5;color:#68725d;border-radius:99px;padding:11px 18px;letter-spacing:2px;font-size:9px;cursor:pointer}.note{max-height:0;overflow:hidden;transition:max-height .9s ease;margin-top:0}.note.open{max-height:500px;margin-top:20px}.note-inner{padding:20px 0;font-size:15px;line-height:1.8}
+/* SCRATCH — closely follows reference */
+.scratch-section{text-align:center;background:radial-gradient(circle at 15% 20%,rgba(185,160,100,.08),transparent 28%),#fbf8ef;padding-top:72px;padding-bottom:78px}.scratch-section h2{font:43px 'Cormorant Garamond';font-weight:500;margin:9px 0;color:#3f493e}.scratch-wrap{max-width:390px;margin:27px auto 0;position:relative}.scratch-card{position:relative;width:100%;aspect-ratio:1.48;border:1px solid rgba(183,154,88,.38);box-shadow:0 14px 38px rgba(83,66,40,.12);overflow:hidden;background:#fffdf8}.scratch-reveal{position:absolute;inset:0;display:grid;place-items:center;background:#fffdf8;padding:18px}.reveal-paper{width:87%;height:84%;border:1px solid rgba(183,154,88,.28);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(83,66,40,.07);background:#fffdf9}.reveal-paper .save{font-size:9px;letter-spacing:4px;color:#9b8965;text-transform:uppercase}.reveal-paper h3{font:31px 'Cormorant Garamond';margin:8px 0;color:#344336}.reveal-paper .date{font:16px 'Cormorant Garamond';letter-spacing:1px;color:#6c725f}.reveal-paper .message{font:italic 15px 'Cormorant Garamond';margin:13px 0 7px;color:#77705f}.reveal-paper .tag{font-size:8px;letter-spacing:3px;color:#87936f}.scratch-overlay{position:absolute;inset:0;z-index:3;cursor:crosshair;background:repeating-linear-gradient(135deg,#c3cca0 0 13px,#b4bf91 13px 26px);touch-action:none;box-shadow:inset 0 0 35px rgba(75,84,55,.12)}.scratch-overlay:before{content:'';position:absolute;inset:-20%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.24) 47%,transparent 59%);transform:translateX(-70%);animation:scratchShine 4s ease-in-out infinite}@keyframes scratchShine{55%,100%{transform:translateX(70%)}}.scratch-overlay:after{content:'SCRATCH HERE';position:absolute;inset:0;display:grid;place-items:center;color:#5f654f;font:11px 'Cormorant Garamond';letter-spacing:4px}.scratch-overlay canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.scratch-hint{font-size:9px;letter-spacing:3px;color:#9b8965;margin-top:17px;text-transform:uppercase}.scratch-wrap.revealed .scratch-overlay{opacity:0;pointer-events:none;transition:opacity .6s}.confetti{position:absolute;inset:-30px;z-index:5;pointer-events:none;overflow:hidden}.confetti i{position:absolute;top:-20px;width:6px;height:10px;background:#b79a58;opacity:0;animation:confettiFall 1.8s cubic-bezier(.2,.8,.2,1) both;animation-play-state:paused;transform:rotate(25deg);border-radius:2px}.confetti i:nth-child(3n){background:#87936f}.confetti i:nth-child(4n){background:#d6bd7b}.scratch-wrap.revealed .confetti i{animation-play-state:running}@keyframes confettiFall{0%{opacity:0;transform:translate3d(0,-20px,0) rotate(0) scale(.7)}12%{opacity:1}100%{opacity:0;transform:translate3d(calc((var(--drift,20) - 10)*1px),420px,0) rotate(620deg) scale(1)}}.scratch-wrap.revealed .scratch-hint{opacity:0}
+.quote{text-align:center;background:linear-gradient(145deg,#edf0e8,#f6f1e7);overflow:hidden;padding-top:72px;padding-bottom:72px}.quote blockquote{font:23px/1.6 'Cormorant Garamond';margin:20px auto;max-width:430px;color:#4f5b4d}.quote .arabic{font-size:22px;line-height:1.9}.quote cite{font-size:9px;letter-spacing:2px;color:#8d8062;font-style:normal}
+.events{background:radial-gradient(circle at 50% 0%,rgba(185,160,100,.08),transparent 30%),#fbf8ef;text-align:center}.timeline{margin:30px auto 0;max-width:420px}.event{position:relative;padding:25px 20px 28px;border:1px solid rgba(183,154,88,.26);background:#fffdf7;box-shadow:0 12px 35px rgba(83,66,40,.07)}.event .num{font:14px 'Cormorant Garamond';color:var(--gold);letter-spacing:2px}.event h3{font:27px 'Cormorant Garamond';margin:7px 0}.event p{margin:4px 0;color:#7a735f;font-size:12px;line-height:1.7}.event .time{color:var(--sage-dark);letter-spacing:2px;font-size:10px;text-transform:uppercase}
+.countdown{background:linear-gradient(145deg,#e9e5d7,#f4eee2);text-align:center;position:relative;overflow:hidden}.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;max-width:430px;margin:28px auto}.count{background:rgba(255,253,247,.76);border:1px solid rgba(183,154,88,.28);padding:17px 3px}.count strong{display:block;font:28px 'Cormorant Garamond'}.count span{font-size:7px;letter-spacing:2px;color:#8f8060;text-transform:uppercase}
+.venue{text-align:center;background:radial-gradient(circle at 50% 10%,rgba(185,160,100,.1),transparent 34%),#f4eee2}.venue-card{max-width:420px;margin:auto;padding:34px 20px;background:#fffdf7;border:1px solid rgba(183,154,88,.4);box-shadow:var(--shadow)}.venue-card h3{font:30px 'Cormorant Garamond';margin:8px 0}.venue-card p{font:15px/1.7 'Cormorant Garamond';color:#6e6a59}.venue-note{margin-top:18px;font-size:9px;letter-spacing:2px;color:#9b8965;text-transform:uppercase}
+.hosts{text-align:center;background:linear-gradient(#fbf8ef,#f3eee3)}.host-grid{display:grid;gap:14px;max-width:420px;margin:auto}.host{background:#f5f0e5;border:1px solid rgba(183,154,88,.3);padding:22px}.host h3{font:25px 'Cormorant Garamond';margin:0 0 6px}.host p{margin:4px;font-size:11px;color:#7b735f}.memory-card{max-width:420px;margin:0 auto 18px;padding:22px 18px 20px;background:linear-gradient(135deg,#eee8d8,#faf6eb);border:1px solid rgba(183,154,88,.38);box-shadow:0 14px 38px rgba(83,68,42,.08);position:relative;overflow:hidden}.memory-card:before,.memory-card:after{content:'❧';position:absolute;color:rgba(185,160,100,.42);font-size:28px}.memory-card:before{left:10px;top:8px}.memory-card:after{right:10px;bottom:3px;transform:rotate(180deg)}.memory-eyebrow{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#9b8a67;margin-bottom:7px}.memory-card h3{font:28px 'Cormorant Garamond';margin:0;color:#344237}.memory-card p{margin:4px 0 0;font:italic 14px 'Cormorant Garamond';color:#7b735f}.memory-flourish{margin-top:9px;color:var(--gold);font-size:13px;letter-spacing:4px}.phone{display:inline-block;margin-top:8px;color:var(--sage-dark);text-decoration:none;letter-spacing:1px;font-size:12px}
+.duas{text-align:center;background:radial-gradient(circle at 50% 0%,rgba(137,155,115,.16),transparent 32%),linear-gradient(#edf0e8,#fbf8ef)}.duas p{max-width:420px;margin:18px auto;line-height:1.8;color:#6f6b5a;font-size:15px}.closing{text-align:center;padding:86px 25px 110px;background:#fbf8ef}.closing h2{font:55px 'Great Vibes';font-weight:400;color:var(--sage-dark);margin:8px}.closing p{letter-spacing:4px;font-size:9px;color:#9b8965}.music{position:fixed;right:15px;bottom:17px;z-index:90;width:43px;height:43px;border-radius:50%;border:1px solid rgba(183,154,88,.55);background:rgba(255,250,241,.94);color:#6f765f;box-shadow:0 7px 20px rgba(58,47,29,.15);cursor:pointer}.fade{opacity:0;transform:translate3d(0,42px,0) scale(.985);filter:blur(5px);transition:opacity 1.15s cubic-bezier(.2,.8,.2,1),transform 1.15s cubic-bezier(.2,.8,.2,1),filter 1.15s ease;will-change:transform,opacity}.fade.show{opacity:1;transform:none;filter:blur(0)}.fade.show .card,.fade.show .event,.fade.show .venue-card,.fade.show .host,.fade.show .count{animation:cardRise .95s cubic-bezier(.2,.8,.2,1) both}.fade.show .card{animation-delay:.12s}.fade.show .event{animation-delay:.16s}.fade.show .venue-card{animation-delay:.14s}.fade.show .host:nth-child(2){animation-delay:.22s}.fade.show .count:nth-child(2){animation-delay:.08s}.fade.show .count:nth-child(3){animation-delay:.16s}.fade.show .count:nth-child(4){animation-delay:.24s}@keyframes cardRise{from{opacity:0;transform:translateY(28px) scale(.97);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+.card,.event,.venue-card,.host,.count{transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease}.card:hover,.event:hover,.venue-card:hover,.host:hover,.count:hover{transform:translateY(-6px) rotateX(.5deg);box-shadow:0 24px 55px rgba(83,66,40,.14)}
+@media(max-width:480px){.section{padding-left:19px;padding-right:19px}.opening-card{height:570px}.hero h1{font-size:56px}.count strong{font-size:25px}}
+
+.reveal-paper{transform-style:preserve-3d;animation:paperBreath 4.5s ease-in-out infinite}@keyframes paperBreath{50%{transform:translateY(-2px) rotateX(.8deg)}}
+.hero h1{animation:heroNameIn 1.4s .15s cubic-bezier(.2,.8,.2,1) both}.hero .arabic{animation:softDrop 1s ease both}.hero .datebox{animation:lineReveal 1.1s .45s ease both}@keyframes heroNameIn{from{opacity:0;transform:translateY(28px) scale(.94);letter-spacing:4px}to{opacity:1;transform:none;letter-spacing:normal}}@keyframes softDrop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}@keyframes lineReveal{from{opacity:0;clip-path:inset(0 50%)}to{opacity:1;clip-path:inset(0 0)}}
+.rule{animation:ruleGlow 3s ease-in-out infinite alternate}@keyframes ruleGlow{to{filter:drop-shadow(0 0 5px rgba(185,160,100,.35))}}
+.corner{transition:transform 1s ease,opacity 1s ease}.fade.show .corner.tl{transform:translate(3px,3px)}.fade.show .corner.tr{transform:translate(-3px,3px)}.fade.show .corner.bl{transform:translate(3px,-3px)}.fade.show .corner.br{transform:translate(-3px,-3px)}
+/* Motion intentionally remains enabled: this invitation is designed as a cinematic experience. */
+
+/* V4 WINE + TOP-TIER MOTION */
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:79;background:radial-gradient(circle at 20% 15%,rgba(177,138,74,.10),transparent 24%),radial-gradient(circle at 85% 75%,rgba(101,31,49,.08),transparent 30%);mix-blend-mode:multiply;animation:ambientPulse 9s ease-in-out infinite alternate}
+@keyframes ambientPulse{from{opacity:.55;transform:scale(1)}to{opacity:1;transform:scale(1.035)}}
+@keyframes goldSweep{0%{transform:translateX(-130%) rotate(8deg);opacity:0}18%{opacity:.7}55%{opacity:.18}100%{transform:translateX(130%) rotate(8deg);opacity:0}}
+@keyframes floatOrnament{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(0,-8px,0) rotate(1.5deg)}}
+@keyframes breatheCard{0%,100%{box-shadow:0 22px 60px rgba(67,17,31,.15),0 0 0 rgba(177,138,74,0)}50%{box-shadow:0 28px 72px rgba(67,17,31,.22),0 0 26px rgba(177,138,74,.10)}}
+.ornament,.floral,.hero-ornament,.decor,.corner{animation:floatOrnament 7s ease-in-out infinite}
+.card,.event-card,.family-card,.memory-card,.note-card{animation:breatheCard 7s ease-in-out infinite}
+
+/* ===== V5 WINE × CINEMATIC REFINEMENT ===== */
+:root{
+  --ivory:#f7f0e6;--cream:#eee0d2;--paper:#fffaf2;
+  --ink:#3b1622;--muted:#684b53;--wine:#74192f;--wine-dark:#43101f;
+  --wine-mid:#8b2943;--sage:#66705b;--sage-dark:#3f493b;
+  --gold:#b78b42;--gold-light:#d9bd7e;--line:rgba(116,25,47,.28);
+  --shadow:0 24px 70px rgba(67,16,31,.20)
+}
+body{background:#3d1722;color:var(--ink)}
+.page{background:var(--ivory)}
+.page:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.11;background:linear-gradient(115deg,transparent 0 43%,rgba(116,25,47,.18) 49%,transparent 55%);background-size:280% 100%;animation:paperSheen 12s ease-in-out infinite}
+@keyframes paperSheen{0%,72%,100%{background-position:140% 0}84%{background-position:-40% 0}}
+.petals{z-index:90}.petal{box-shadow:0 2px 8px rgba(67,16,31,.08)}
+.ambient{z-index:89}.orb{background:radial-gradient(circle,rgba(183,139,66,.20),rgba(116,25,47,.06) 35%,transparent 70%)}
+.section{isolation:isolate}.section:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 20%,rgba(183,139,66,.09),transparent 24%),radial-gradient(circle at 88% 78%,rgba(116,25,47,.08),transparent 28%);animation:sectionAura 9s ease-in-out infinite alternate}
+@keyframes sectionAura{from{opacity:.55;transform:scale(1)}to{opacity:1;transform:scale(1.035)}}
+.eyebrow{color:#8a6747;text-shadow:0 1px rgba(255,255,255,.55)}
+.rule{background:linear-gradient(90deg,transparent,var(--gold),transparent);filter:drop-shadow(0 0 5px rgba(183,139,66,.22))}.rule:after{background:var(--ivory);color:var(--gold)}
+/* Opening */
+#opening{background:radial-gradient(circle at 50% 20%,#fffdf7 0,#f6ede0 48%,#ead9cf 100%)}
+.opening-card{animation:openingBreath 4.2s ease-in-out infinite, openingFloat 6s ease-in-out infinite}
+@keyframes openingFloat{0%,100%{transform:translateY(0) rotateZ(0)}50%{transform:translateY(-7px) rotateZ(.15deg)}}
+.opening-card:before{background:linear-gradient(145deg,rgba(255,253,247,.94),rgba(250,239,223,.88));border-color:rgba(116,25,47,.20);box-shadow:0 25px 75px rgba(67,16,31,.17)}
+.envelope{background:linear-gradient(145deg,#fffdf7,#f0dfd4);border-color:rgba(116,25,47,.28)}
+.flap{background:linear-gradient(145deg,#fffdf8,#ead7ce);border-color:rgba(116,25,47,.26)}
+.seal{box-shadow:0 10px 26px rgba(67,16,31,.28),inset 0 2px 5px rgba(255,255,255,.55),0 0 0 5px rgba(183,139,66,.10)}
+.opening-copy h1{color:var(--wine);text-shadow:0 2px 0 rgba(255,255,255,.65),0 0 24px rgba(183,139,66,.10)}
+.opening-copy .bismillah{color:var(--wine-dark)}
+.tap{border:1px solid rgba(116,25,47,.32)!important;background:rgba(255,250,243,.94)!important;color:var(--wine)!important;box-shadow:0 9px 24px rgba(67,16,31,.13);font-weight:600}
+.tap:after{border-color:rgba(116,25,47,.22)}
+.open-hint{color:var(--wine)}
+.opening-card.open .opening-copy{animation:copyLift 1.05s cubic-bezier(.2,.8,.2,1) both}
+@keyframes copyLift{0%{transform:translateY(0) scale(1);opacity:1}70%{transform:translateY(-12px) scale(1.03);opacity:1}100%{transform:translateY(-26px) scale(.98);opacity:.86}}
+.opening-card.open .envelope{animation:envelopeBloom 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes envelopeBloom{0%{transform:scale(1)}45%{transform:scale(1.018) rotateX(1deg)}100%{transform:scale(1.035) rotateX(0)}}
+/* Hero */
+.hero{background:linear-gradient(180deg,#fffaf2,#f3e4da);box-shadow:inset 0 1px rgba(116,25,47,.08),inset 0 -1px rgba(183,139,66,.16)}
+.hero h1{color:var(--wine);text-shadow:0 3px 20px rgba(116,25,47,.08)}
+.hero .amp{color:var(--gold)}.hero .arabic{color:var(--wine-dark)}.hero .sub{color:var(--wine)}
+.datebox{border-color:rgba(116,25,47,.30);background:rgba(255,250,243,.42);box-shadow:0 0 0 1px rgba(183,139,66,.07),0 14px 32px rgba(67,16,31,.05)}
+.datebox strong{color:var(--wine)}
+/* Scratch */
+.scratch-section{background:linear-gradient(180deg,#fff9f0 0%,#f0dfd6 100%)}
+.scratch-section h2{color:var(--wine)}
+.scratch-card{border-color:rgba(116,25,47,.28);box-shadow:0 22px 60px rgba(67,16,31,.16);transform:perspective(1000px) rotateX(0deg);animation:cardBreath 5.5s ease-in-out infinite}
+@keyframes cardBreath{50%{transform:perspective(1000px) translateY(-5px) rotateX(.5deg);box-shadow:0 30px 72px rgba(67,16,31,.20)}}
+.scratch-overlay{background:repeating-linear-gradient(135deg,#7f2740 0 13px,#6e1c34 13px 26px);box-shadow:inset 0 0 45px rgba(47,8,20,.28)}
+.scratch-overlay:after{color:#fff1dd;text-shadow:0 1px 8px rgba(0,0,0,.16)}
+.scratch-reveal{background:#fffaf2}.reveal-paper{background:linear-gradient(145deg,#fffdf7,#f5e9df);border-color:rgba(116,25,47,.20)}
+.reveal-paper .save{color:var(--wine)}.reveal-paper h3{color:var(--wine-dark)}.reveal-paper .date{color:#5d3440}.reveal-paper .message{color:#5f4b4f}.reveal-paper .tag{color:var(--wine)}
+.scratch-hint{color:var(--wine)}
+/* Intro */
+.intro{background:linear-gradient(145deg,#f8eee5,#ead8d0)}
+.card{background:rgba(255,250,243,.96);border-color:rgba(116,25,47,.24);box-shadow:0 20px 58px rgba(67,16,31,.14)}
+.card:before{border-color:rgba(183,139,66,.30)}
+.intro h2{color:var(--wine)}.intro p{color:#543f45}.seal-mini{background:radial-gradient(circle at 30% 25%,#a94560,#74192f 68%,#4b1021);box-shadow:0 10px 25px rgba(67,16,31,.24),0 0 0 5px rgba(183,139,66,.09)}
+.note-btn{background:#74192f;color:#fff8ee;border-color:#74192f;box-shadow:0 10px 24px rgba(67,16,31,.18)}
+.note-inner{color:#503b42;border-top:1px solid rgba(116,25,47,.15)}
+/* Blessing — strong contrast */
+.quote{background:linear-gradient(145deg,#4b1021,#74192f 55%,#5d1329);color:#fff8ed;box-shadow:inset 0 1px rgba(255,255,255,.08),inset 0 -1px rgba(0,0,0,.15)}
+.quote:before{background:radial-gradient(circle at 20% 25%,rgba(217,189,126,.16),transparent 26%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.06),transparent 25%)}
+.quote .eyebrow,.quote cite{color:#e2c997}.quote .arabic{color:#fff4df;text-shadow:0 2px 15px rgba(0,0,0,.16)}.quote blockquote{color:#fff7eb;text-shadow:0 1px 10px rgba(0,0,0,.12)}
+.quote .rule:after{background:#74192f}
+/* Events */
+.events{background:linear-gradient(180deg,#fffaf2,#f1e1d7)}.events h2{color:var(--wine)}
+.event{background:linear-gradient(145deg,#fffdf8,#f6eae1);border-color:rgba(116,25,47,.24);box-shadow:0 18px 52px rgba(67,16,31,.13);overflow:hidden}
+.event:after,.venue-card:after,.host:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.30) 48%,transparent 61%);transform:translateX(-120%);animation:surfaceShine 7s ease-in-out infinite;pointer-events:none}
+@keyframes surfaceShine{0%,55%,100%{transform:translateX(-120%)}70%{transform:translateX(120%)}}
+.event h3{color:var(--wine-dark)}.event .time{color:var(--wine)}.event p{color:#5c484e}
+/* Countdown */
+.countdown{background:linear-gradient(135deg,#4b1021,#74192f 52%,#8a2b45);color:#fff8ed}
+.countdown:before{background:radial-gradient(circle at 10% 20%,rgba(217,189,126,.18),transparent 25%),radial-gradient(circle at 90% 80%,rgba(255,255,255,.06),transparent 28%)}
+.countdown .eyebrow{color:#e0c690}.countdown h2{color:#fff8ed!important;text-shadow:0 3px 18px rgba(0,0,0,.14)}
+.count{background:rgba(255,249,239,.97);border-color:rgba(217,189,126,.55);box-shadow:0 15px 36px rgba(42,7,18,.20);color:var(--wine-dark);position:relative;overflow:hidden}.count:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(183,139,66,.13) 50%,transparent 65%);transform:translateX(-120%);animation:countShine 5s ease-in-out infinite}.count strong{color:var(--wine);font-size:31px}.count span{color:#75565d}
+@keyframes countShine{0%,65%,100%{transform:translateX(-120%)}80%{transform:translateX(120%)}}
+/* Venue */
+.venue{background:linear-gradient(145deg,#f7e9df,#efe0d7)}.venue h2{color:var(--wine)}.venue-card{background:linear-gradient(145deg,#fffdf7,#f7e9df);border-color:rgba(116,25,47,.24);box-shadow:0 24px 65px rgba(67,16,31,.15);position:relative;overflow:hidden}.venue-card h3{color:var(--wine-dark)}.venue-card p{color:#59454b}
+/* Family */
+.hosts{background:linear-gradient(180deg,#fffaf2,#f0dfd6)}.hosts h2{color:var(--wine)}.memory-card{background:linear-gradient(135deg,#6b1830,#8b2943);border-color:rgba(217,189,126,.48);box-shadow:0 24px 62px rgba(67,16,31,.20);color:#fff7eb;position:relative;overflow:hidden}.memory-card:before,.memory-card:after{color:rgba(217,189,126,.65)}.memory-eyebrow{color:#e3ca96}.memory-card h3{color:#fff7eb;text-shadow:0 2px 12px rgba(0,0,0,.14)}.memory-card p{color:#f0dcbf}.memory-flourish{color:#e1c07d}.host{background:linear-gradient(145deg,#fffdf7,#f5e9df);border-color:rgba(116,25,47,.23);box-shadow:0 16px 45px rgba(67,16,31,.11);position:relative;overflow:hidden}.host h3{color:var(--wine)}.host p{color:#5b474d}.phone{color:var(--wine);font-weight:600}
+/* Duas / Closing */
+.duas{background:linear-gradient(145deg,#f7eee4,#ead8d0)}.duas h2{color:var(--wine)}.duas p{color:#554147}.closing{background:linear-gradient(145deg,#4b1021,#74192f);color:#fff7ec;position:relative;overflow:hidden}.closing:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 35%,rgba(217,189,126,.18),transparent 32%);animation:closingGlow 7s ease-in-out infinite alternate}@keyframes closingGlow{from{transform:scale(.9);opacity:.55}to{transform:scale(1.15);opacity:1}}.closing>*{position:relative}.closing .eyebrow{color:#e0c690}.closing h2{color:#fff7ec;text-shadow:0 4px 25px rgba(0,0,0,.18)}.closing p{color:#e0c690}
+.music{background:rgba(255,248,237,.96);color:var(--wine);border-color:rgba(116,25,47,.34);box-shadow:0 9px 28px rgba(67,16,31,.20)}
+/* Top-tier scroll choreography */
+.fade{opacity:0;transform:translate3d(0,70px,0) scale(.94) rotateX(2deg);filter:blur(8px);clip-path:inset(8% 3% 0 3% round 22px);transition:opacity 1.15s cubic-bezier(.16,1,.3,1),transform 1.35s cubic-bezier(.16,1,.3,1),filter 1.1s ease,clip-path 1.25s cubic-bezier(.16,1,.3,1)}
+.fade.show{opacity:1;transform:none;filter:blur(0);clip-path:inset(0 0 0 0 round 0)}
+.fade.show .eyebrow{animation:eyebrowIn .9s .08s both cubic-bezier(.16,1,.3,1)}
+.fade.show h2,.fade.show .hero h1{animation:headingIn 1.05s .13s both cubic-bezier(.16,1,.3,1)}
+@keyframes eyebrowIn{from{opacity:0;letter-spacing:12px;transform:translateY(12px)}to{opacity:1;letter-spacing:5px;transform:none}}
+@keyframes headingIn{from{opacity:0;transform:translateY(28px) scale(.92);filter:blur(7px)}to{opacity:1;transform:none;filter:blur(0)}}
+.fade.show .rule{animation:ruleDraw 1.2s .28s both cubic-bezier(.16,1,.3,1)}
+@keyframes ruleDraw{from{width:0;opacity:0}to{width:126px;opacity:1}}
+.fade.show .leaf,.fade.show .memory-flourish{animation:flourishFloat 2.6s .35s ease-in-out both}
+@keyframes flourishFloat{0%{opacity:0;transform:translateY(14px) scale(.7)}55%{opacity:1;transform:translateY(-3px) scale(1.08)}100%{opacity:1;transform:none}}
+.fade.show .card,.fade.show .event,.fade.show .venue-card,.fade.show .host,.fade.show .count,.fade.show .memory-card{animation:cardRiseV5 1.05s .22s both cubic-bezier(.16,1,.3,1)}
+.fade.show .host:nth-child(2){animation-delay:.36s}.fade.show .count:nth-child(2){animation-delay:.30s}.fade.show .count:nth-child(3){animation-delay:.38s}.fade.show .count:nth-child(4){animation-delay:.46s}
+@keyframes cardRiseV5{0%{opacity:0;transform:translate3d(0,48px,0) scale(.90) rotateX(6deg);filter:blur(5px)}65%{opacity:1;transform:translate3d(0,-5px,0) scale(1.01) rotateX(0)}100%{opacity:1;transform:none;filter:none}}
+/* touch-friendly motion, no hover dependency */
+@media (hover:hover){.card:hover,.event:hover,.venue-card:hover,.host:hover,.count:hover{transform:translateY(-10px) scale(1.012);box-shadow:0 28px 65px rgba(67,16,31,.19)}}
+/* sparkle field */
+.spark{position:fixed;z-index:88;width:4px;height:4px;border-radius:50%;background:#d8bc7e;box-shadow:0 0 9px rgba(216,188,126,.75);pointer-events:none;opacity:0;animation:sparkFloat var(--dur) ease-in-out var(--delay) infinite}.spark.wine{background:#9c3655;box-shadow:0 0 9px rgba(156,54,85,.55)}
+@keyframes sparkFloat{0%,100%{opacity:0;transform:translate3d(0,18px,0) scale(.5)}20%,75%{opacity:.8}50%{transform:translate3d(var(--dx),-38px,0) scale(1.15)}}
+
+
+/* V6 animation repair: continuous visible cinematic leaf layer */
+.motion-leaves{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden}
+.motion-leaf{display:none;position:absolute;top:-8vh;left:var(--x);width:var(--w);height:var(--h);border-radius:80% 20% 80% 20%;background:var(--c);opacity:var(--o);filter:drop-shadow(0 3px 5px rgba(67,16,31,.12));animation:cinematicLeaf var(--dur) cubic-bezier(.35,.05,.55,1) var(--delay) infinite;will-change:transform,opacity}
+.motion-leaf:before{content:"";position:absolute;left:48%;top:8%;width:1px;height:84%;background:rgba(255,244,213,.45);transform:rotate(18deg)}
+@keyframes cinematicLeaf{0%{transform:translate3d(0,-10vh,0) rotate(0deg) scale(.7);opacity:0}8%{opacity:var(--o)}30%{transform:translate3d(calc(var(--drift)*.3),30vh,0) rotate(150deg) scale(1)}58%{transform:translate3d(calc(var(--drift)*-.55),63vh,0) rotate(300deg) scale(.88)}82%{opacity:var(--o)}100%{transform:translate3d(var(--drift),115vh,0) rotate(510deg) scale(1.08);opacity:0}}
+/* Stronger cinematic section choreography */
+.fade.show{animation:sectionArrival 1.35s cubic-bezier(.16,1,.3,1) both}
+@keyframes sectionArrival{0%{opacity:0;transform:translateY(75px) scale(.94);filter:blur(9px)}55%{opacity:1;transform:translateY(-7px) scale(1.01);filter:blur(1px)}100%{opacity:1;transform:none;filter:none}}
+.hero:after,.scratch-section:after,.events:after,.venue:after,.duas:after{content:"";position:absolute;left:-30%;top:0;width:35%;height:100%;pointer-events:none;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-120%);animation:sectionSheen 8s ease-in-out infinite}
+@keyframes sectionSheen{0%,55%,100%{transform:translateX(-120%)}70%{transform:translateX(420%)}}
+
+/* V7 — robust animation engine: canvas layer, independent of CSS animation support */
+#cinematicCanvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:9997;pointer-events:none;display:block}
+#cinematicCanvas{opacity:1!important;visibility:visible!important}
+.motion-leaves,.petals,.ambient{visibility:visible!important}
+.opening-card,.opening-copy h1,.tap,.seal{will-change:transform,opacity,filter}
+body.motion-ready #cinematicCanvas{display:block!important}
+.motion-vignette{position:fixed;inset:0;z-index:9996;pointer-events:none;background:radial-gradient(circle at 50% 38%,transparent 0 42%,rgba(48,10,24,.035) 82%,rgba(48,10,24,.09) 100%);mix-blend-mode:multiply}
+
+/* Guaranteed opening motion */
+@keyframes sealPulseTop{0%,100%{box-shadow:0 10px 26px rgba(67,16,31,.28),inset 0 2px 5px rgba(255,255,255,.55),0 0 0 4px rgba(183,139,66,.08)}50%{box-shadow:0 14px 34px rgba(67,16,31,.34),inset 0 2px 5px rgba(255,255,255,.65),0 0 0 12px rgba(183,139,66,.02)}}
+.seal{animation:sealPulseTop 2.4s ease-in-out infinite!important}
+.opening-card:not(.open) .tap{animation:tapFloatTop 2.2s ease-in-out infinite!important}
+@keyframes tapFloatTop{0%,100%{transform:translateX(-50%) translateY(0);filter:brightness(1)}50%{transform:translateX(-50%) translateY(-5px);filter:brightness(1.04)}}
+</style>
+</head>
+<body>
+<canvas id="cinematicCanvas" aria-hidden="true"></canvas><div class="motion-vignette" aria-hidden="true"></div>
+<div class="petals" aria-hidden="true"></div><div class="ambient" aria-hidden="true"><i class="orb" style="left:-60px;top:12%"></i><i class="orb" style="right:-80px;top:46%"></i><i class="orb" style="left:25%;bottom:4%"></i></div>
+<div class="motion-leaves" aria-hidden="true"></div>
+<div class="page">
+<section id="opening" class="section ornate">
+ <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+ <div class="opening-inner">
+  <div class="opening-card" id="envelope">
+   <div class="envelope"></div><div class="flap"></div>
+   <div class="opening-copy"><div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div><p>WITH THEIR FAMILIES</p><h1>Ayaz &amp; Sadia</h1><p class="date">27 OCTOBER 2026 · THAKURDWARA</p></div>
+   <div class="seal">A</div>
+   <button class="tap" id="openBtn">TAP TO OPEN<span>⌄</span></button>
+  </div>
+  <div class="open-hint">A little invitation, wrapped with love</div>
+ </div>
+</section>
+
+<section class="section hero ornate fade"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+ <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div><div class="eyebrow">Together with their families</div>
+ <h1>Ayaz <span class="amp">&amp;</span> Sadia</h1><div class="sub">Dawat-E-Walima</div><div class="leaf">❧ ✦ ❧</div>
+ <div class="datebox"><strong>TUESDAY · 27 OCTOBER 2026</strong><small>DINNER · 8:00 P.M.</small></div>
+</section>
+
+<section class="section scratch-section fade">
+ <div class="eyebrow">A Little Surprise</div><h2 style="font:46px 'Cormorant Garamond';margin:10px 0">Scratch &amp; Reveal</h2><div class="rule"></div>
+ <div class="scratch-wrap" id="scratchWrap">
+  <div class="scratch-card">
+   <div class="confetti" aria-hidden="true"><i style="left:0%;animation-delay:0.0s"></i><i style="left:37%;animation-delay:0.04s"></i><i style="left:74%;animation-delay:0.08s"></i><i style="left:11%;animation-delay:0.12s"></i><i style="left:48%;animation-delay:0.16s"></i><i style="left:85%;animation-delay:0.2s"></i><i style="left:22%;animation-delay:0.24s"></i><i style="left:59%;animation-delay:0.28s"></i><i style="left:96%;animation-delay:0.0s"></i><i style="left:33%;animation-delay:0.04s"></i><i style="left:70%;animation-delay:0.08s"></i><i style="left:7%;animation-delay:0.12s"></i><i style="left:44%;animation-delay:0.16s"></i><i style="left:81%;animation-delay:0.2s"></i><i style="left:18%;animation-delay:0.24s"></i><i style="left:55%;animation-delay:0.28s"></i><i style="left:92%;animation-delay:0.0s"></i><i style="left:29%;animation-delay:0.04s"></i><i style="left:66%;animation-delay:0.08s"></i><i style="left:3%;animation-delay:0.12s"></i><i style="left:40%;animation-delay:0.16s"></i><i style="left:77%;animation-delay:0.2s"></i><i style="left:14%;animation-delay:0.24s"></i><i style="left:51%;animation-delay:0.28s"></i></div>
+   <div class="scratch-reveal"><div class="reveal-paper"><div class="save">Save The Date</div><h3>Tuesday</h3><div class="date">October 27, 2026</div><div class="message">We can't wait to see you there</div><div class="tag">#AYAZWEDSSADIA</div></div></div>
+   <div class="scratch-overlay" id="scratchOverlay"><canvas id="scratchCanvas"></canvas></div>
+  </div>
+  <div class="scratch-hint">Reveal the little surprise beneath</div>
+ </div>
+</section>
+
+<section class="section intro fade"><div class="card"><div class="seal-mini">A&amp;S</div><div class="eyebrow">Our Invitation</div><h2>Dear Family &amp; Friends</h2><div class="rule"></div>
+ <p>By the grace of Allah, we joyfully invite you to join us for our Dawat-E-Walima and bless this beautiful occasion with your presence, prayers and duas.</p>
+ <button class="note-btn" id="noteBtn">✦ &nbsp; TAP TO READ OUR NOTE</button><div class="note" id="note"><div class="note-inner">Your presence will make this gathering even more special. We would be honoured to celebrate this day with the people who mean so much to our family. Please keep Ayaz and Sadia in your duas.</div></div>
+ </div></section>
+
+
+
+<section class="section quote fade"><div class="eyebrow">A Blessing</div><div class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</div><blockquote>“And among His signs is that He created for you spouses from among yourselves so that you may find tranquillity in them.”</blockquote><cite>QUR’AN · 30:21</cite></section>
+
+<section class="section events fade"><div class="eyebrow">The Celebration</div><h2>Wedding Event</h2><div class="rule"></div><div class="timeline">
+ <div class="event"><div class="num">01</div><h3>Dawat-E-Walima</h3><div class="time">Tuesday · 27 October 2026</div><p>Dinner at <strong>8:00 P.M.</strong></p><p>A warm evening of food, family, blessings &amp; celebration.</p></div>
+ </div></section>
+
+<section class="section countdown fade"><div class="eyebrow">Counting The Moments</div><h2 style="font:45px 'Cormorant Garamond';margin:10px 0">Until We Celebrate</h2><div class="count-grid"><div class="count"><strong id="days">--</strong><span>Days</span></div><div class="count"><strong id="hours">--</strong><span>Hours</span></div><div class="count"><strong id="mins">--</strong><span>Minutes</span></div><div class="count"><strong id="secs">--</strong><span>Seconds</span></div></div></section>
+
+<section class="section venue fade"><div class="eyebrow">Join Us Here</div><h2>Venue</h2><div class="rule"></div><div class="venue-card"><div class="leaf">❧</div><h3>Shahnai Celebration Marriage Hall</h3><p>Near Ratpura Mod,<br>Seohara Road, Thakurdwara (MBD)</p></div></section>
+
+<section class="section hosts fade"><div class="eyebrow">With Love From</div><h2 style="font:45px 'Cormorant Garamond';margin:10px 0">The Family</h2><div class="rule"></div><div class="memory-card"><div class="memory-eyebrow">In Loving Memory</div><h3>Late Dr. Naseem Jahan</h3><p>Ex-Chairperson</p><div class="memory-flourish">❧ ✦ ❧</div></div><div class="host-grid"><div class="host"><h3>Riyaz Ahmad</h3><p>Father of the Groom · With warm regards</p><p>Moh. Jamnawala, Thakurdwara (Moradabad)</p><a class="phone" href="tel:9760629557">9760629557</a> · <a class="phone" href="tel:9411635273">9411635273</a></div><div class="host"><h3>Margubul Haqu</h3><p>Father of the Bride</p><p>R/o Aligarh</p></div></div></section>
+
+<section class="section duas fade"><div class="eyebrow">The Most Precious Gift</div><h2>Your Duas</h2><div class="rule"></div><p>Your presence is a blessing, but your duas are the gift we will carry with us. Please remember Ayaz and Sadia in your prayers for a life filled with love, mercy and barakah.</p><div class="leaf">❧ ✦ ❧</div></section>
+<section class="closing fade"><div class="eyebrow">With love, always</div><h2>Ayaz &amp; Sadia</h2><p>27 · 10 · 2026</p></section>
+</div>
+<button class="music" id="musicBtn" aria-label="Music control">♪</button>
+<script>
+const $=s=>document.querySelector(s); const $$=s=>document.querySelectorAll(s);
+const petalPalette=['rgba(116,25,47,.48)','rgba(145,38,61,.36)','rgba(188,145,69,.42)','rgba(225,197,129,.32)','rgba(92,68,45,.28)'];for(let i=0;i<8;i++){const p=document.createElement('i');p.className='petal';p.style.setProperty('--x',(Math.random()*100)+'%');p.style.setProperty('--w',(5+Math.random()*7)+'px');p.style.setProperty('--h',(8+Math.random()*10)+'px');p.style.setProperty('--c',petalPalette[i%petalPalette.length]);p.style.setProperty('--o',(0.55+Math.random()*.4).toFixed(2));p.style.setProperty('--blur',(Math.random()*1.1).toFixed(2)+'px');p.style.setProperty('--dur',(8+Math.random()*12).toFixed(2)+'s');p.style.setProperty('--delay',(-Math.random()*18).toFixed(2)+'s');p.style.setProperty('--rot',(Math.random()*180).toFixed(1)+'deg');p.style.setProperty('--drift',((-70)+Math.random()*140).toFixed(1)+'px');$('.petals').appendChild(p)}
+let invitationOpened=false;
+function openInvitation(){if(invitationOpened)return;invitationOpened=true;document.body.classList.add('invitation-live');$('#envelope').classList.add('open');document.body.style.overflowY='auto';setTimeout(()=>document.querySelector('.hero').scrollIntoView({behavior:'smooth',block:'start'}),1150);}
+$('#openBtn').addEventListener('click',(e)=>{e.stopPropagation();openInvitation();});
+$('#opening').addEventListener('click',openInvitation);
+const scratchCanvas=$('#scratchCanvas'), scratchOverlay=$('#scratchOverlay'), scratchWrap=$('#scratchWrap');
+const ctx=scratchCanvas.getContext('2d'); let scratching=false, revealed=false;
+function sizeScratch(){const r=scratchOverlay.getBoundingClientRect(); const dpr=1; scratchCanvas.width=Math.round(r.width*dpr); scratchCanvas.height=Math.round(r.height*dpr); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.fillStyle='#c0c99a';ctx.fillRect(0,0,r.width,r.height);ctx.globalCompositeOperation='destination-out';}
+function scratchPoint(e){const r=scratchOverlay.getBoundingClientRect();return {x:(e.clientX-r.left),y:(e.clientY-r.top)};}
+function scratchAt(x,y){ctx.beginPath();ctx.arc(x,y,27,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(x,y,39,0,Math.PI*2);ctx.globalAlpha=.12;ctx.fill();ctx.globalAlpha=1;}
+function beginScratch(e){if(revealed)return;scratching=true;scratchOverlay.setPointerCapture?.(e.pointerId);const p=scratchPoint(e);scratchAt(p.x,p.y);}
+function moveScratch(e){if(!scratching||revealed)return;const p=scratchPoint(e);scratchAt(p.x,p.y);}
+function endScratch(){if(!scratching)return;scratching=false;const w=scratchCanvas.width,h=scratchCanvas.height,data=ctx.getImageData(0,0,w,h).data;let transparent=0,total=0;const step=12;for(let y=0;y<h;y+=step){for(let x=0;x<w;x+=step){const i=(y*w+x)*4;total++;if(data[i+3]<30)transparent++;}}if(transparent/total>.42){revealed=true;scratchWrap.classList.add('revealed');}}
+scratchOverlay.addEventListener('pointerdown',beginScratch);scratchOverlay.addEventListener('pointermove',moveScratch);scratchOverlay.addEventListener('pointerup',endScratch);scratchOverlay.addEventListener('pointercancel',endScratch);window.addEventListener('resize',()=>{if(!revealed)sizeScratch()});sizeScratch();
+$('#noteBtn').addEventListener('click',()=>{const n=$('#note');n.classList.toggle('open');$('#noteBtn').innerHTML=n.classList.contains('open')?'✦ &nbsp; CLOSE OUR NOTE':'✦ &nbsp; TAP TO READ OUR NOTE'});
+const target=new Date('2026-10-27T20:00:00+05:30');function tick(){let d=Math.max(0,target-new Date());let s=Math.floor(d/1000);$('#days').textContent=Math.floor(s/86400);s%=86400;$('#hours').textContent=Math.floor(s/3600);s%=3600;$('#mins').textContent=Math.floor(s/60);$('#secs').textContent=s%60}tick();setInterval(tick,1000);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});$$('.fade').forEach(e=>io.observe(e));
+// Cinematic pointer/touch depth on cards
+$$('.card,.event,.venue-card,.host,.count,.reveal-paper').forEach(el=>{el.addEventListener('pointermove',e=>{if(matchMedia('(pointer:coarse)').matches)return;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateX(${(-y*2.2).toFixed(2)}deg) rotateY(${(x*2.2).toFixed(2)}deg) translateY(-5px)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
+let lastScroll=0;
+window.addEventListener('scroll',()=>{const y=window.scrollY;document.documentElement.style.setProperty('--scroll-shift',Math.min(y*.035,18)+'px');document.querySelectorAll('.fade.show').forEach((el,i)=>{const r=el.getBoundingClientRect();const mid=window.innerHeight/2;const delta=(r.top+r.height/2-mid)/window.innerHeight;el.style.setProperty('--parallax',Math.max(-10,Math.min(10,-delta*7))+'px')});lastScroll=y},{passive:true});
+const leafPalette=['rgba(116,25,47,.82)','rgba(145,38,61,.68)','rgba(188,145,69,.72)','rgba(224,194,122,.58)'];for(let i=0;i<6;i++){const l=document.createElement('i');l.className='motion-leaf';l.style.setProperty('--x',(Math.random()*100)+'%');l.style.setProperty('--w',(7+Math.random()*10)+'px');l.style.setProperty('--h',(12+Math.random()*16)+'px');l.style.setProperty('--c',leafPalette[i%leafPalette.length]);l.style.setProperty('--o',(0.55+Math.random()*.35).toFixed(2));l.style.setProperty('--dur',(7+Math.random()*10).toFixed(2)+'s');l.style.setProperty('--delay',(-Math.random()*14).toFixed(2)+'s');l.style.setProperty('--drift',((-90)+Math.random()*180).toFixed(1)+'px');$('.motion-leaves').appendChild(l)}
+
+
+
+/* Lightweight motion: no continuous canvas engine. Keep only the invitation's essential CSS motion. */
+document.body.classList.add('motion-ready');
+// Make section choreography resilient if IntersectionObserver is unavailable or delayed.
+(function revealFallback(){
+ const reveal=()=>document.querySelectorAll('.fade').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight*.92&&r.bottom>0)el.classList.add('show')});
+ reveal();addEventListener('scroll',reveal,{passive:true});setTimeout(reveal,300);setTimeout(reveal,1200);
+})();
+
+$('#musicBtn').addEventListener('click',()=>alert('Music control is ready — add your family-approved audio file here when you want it.'));
+</script>
+</body></html>

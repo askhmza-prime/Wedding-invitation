@@ -18,7 +18,6 @@
 
 * { box-sizing: border-box; }
 
-/* Strictly disable scrolling without stopping animations */
 html, body {
   margin: 0;
   padding: 0;
@@ -42,7 +41,6 @@ html, body {
   box-shadow: 0 0 50px rgba(48,34,17,.15);
 }
 
-/* Lightweight background pattern */
 .page:before {
   content: "";
   position: absolute;
@@ -53,13 +51,12 @@ html, body {
   background-size: 12px 12px;
 }
 
-/* Hardware-accelerated particle layers */
 .petals, .motion-leaves, .ambient {
   position: fixed;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  transform: translateZ(0); /* Force GPU layer */
+  transform: translateZ(0);
 }
 .petals { z-index: 90; }
 .motion-leaves { z-index: 91; }
@@ -120,7 +117,6 @@ html, body {
   to { transform: translate3d(20px,-20px,0); }
 }
 
-/* Opening Section */
 #opening {
   height: 100vh;
   padding: 0;
@@ -283,7 +279,6 @@ html, body {
 <script>
 const $ = s => document.querySelector(s);
 
-// Lightweight Petal Pool (20 items for high performance)
 const petalPalette = ['rgba(116,25,47,.5)','rgba(145,38,61,.4)','rgba(188,145,69,.45)','rgba(225,197,129,.35)'];
 for(let i=0; i<20; i++){
   const p = document.createElement('i');
@@ -300,7 +295,6 @@ for(let i=0; i<20; i++){
   $('.petals').appendChild(p);
 }
 
-// Lightweight Leaf Pool (12 items)
 const leafPalette = ['rgba(116,25,47,.75)','rgba(145,38,61,.65)','rgba(188,145,69,.7)'];
 for(let i=0; i<12; i++){
   const l = document.createElement('i');
@@ -316,7 +310,6 @@ for(let i=0; i<12; i++){
   $('.motion-leaves').appendChild(l);
 }
 
-// Envelope Interaction
 $('#openBtn').addEventListener('click', (e) => {
   e.stopPropagation();
   $('#envelope').classList.add('open');
